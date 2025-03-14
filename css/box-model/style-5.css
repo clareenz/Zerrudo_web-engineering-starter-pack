@@ -1,0 +1,10 @@
+.box {
+    outline: 50px solid var(--color-primary-dark);
+  }
+  
+  /* Presentation styles */
+  article + * {
+    margin-top: 100px;
+  }
+  
+  

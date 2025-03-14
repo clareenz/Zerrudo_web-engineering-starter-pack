@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="base-styles.css" />
+        <link rel="stylesheet" href="styles8.css" />
+    </head>
+    <body>
+        <main>
+            <div class="wrapper">
+                <article class="flow">
+                    <h1>Grid dense and sparse packing</h1>
+                    <figure class="callout">
+                        <p>
+                            Change the packing mode to see how this changes the
+                            layout of items.
+                        </p>
+                    </figure>
+                    <div class="controls">
+                        <label class="toggle" for="gridPacking">
+                            <span class="toggle__label"
+                                >Turn on dense packing</span
+                            >
+                            <input
+                                type="checkbox"
+                                role="switch"
+                                class="toggle__element"
+                                id="gridPacking"
+                            />
+                            <div class="toggle__decor" aria-hidden="true">
+                                <div class="toggle__thumb"></div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="container" id="container">
+                        <div class="box span-row">Item one</div>
+                        <div class="box">Item two</div>
+                        <div class="box span-col">Item three has more text</div>
+                        <div class="box">Item four</div>
+                        <div class="box">Item five</div>
+                    </div>
+                </article>
+            </div>
+        </main>
+        <script src="script8.js"></script>
+    </body>
+</html>

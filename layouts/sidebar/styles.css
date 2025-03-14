@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    transition: 0.3s ease-in;
+}
+.wrapper.pl-300 {
+    padding-left: 0 !important;
+}
+.avator {
+    border-radius: 100px;
+}
+.sidebar {
+    background: #3f51b5;
+    flex-basis: 300px;
+}
+.sidebar .author {
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 100px;
+}
+.sidebar .author h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
+nav.menu {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+nav.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #fdfdfd30;
+    display: block;
+}
+nav.menu a.bt {
+    border-top: 1px solid #fdfdfd30;
+}
+nav.menu a:hover {
+    background: #333;
+    color: #fff;
+}
+.main-elements {
+    flex: 1;
+    padding: 100px;
+}
+.main-elements h1 {
+    margin: 0;
+    color: #ed788d;
+    margin-bottom: 20px;
+}
+.main-elements p {
+    margin-bottom: 15px;
+}
+.toggle-bars {
+    position: relative;
+    margin-bottom: 30px;
+    cursor: pointer;
+    display: none;
+}
+.toggle-bars .bar {
+    width: 35px;
+    background-color: #333;
+    margin: 7px 0;
+    height: 2px;
+}
+.pl-300 {
+    padding-left: 300px;
+}
+.sidebar.show {
+    display: block;
+}
+@media screen and (max-width: 900px) {
+    .wrapper.pl-300 {
+        padding-left: 300px !important;
+    }
+    .toggle-bars {
+        display: block;
+    }
+    .sidebar {
+        position: fixed;
+        height: 100vh;
+        width: 300px;
+        left: -300px;
+        transition: 0.3s ease-in;
+    }
+    .sidebar.show {
+        left: 0;
+    }
+    .main-elements {
+        padding-top: 30px;
+    }
+}

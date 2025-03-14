@@ -1,0 +1,13 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    background-color: #dadce0;
+    padding: 0.5em;
+    border-radius: 3px;
+    max-width: 1200px;
+}
+
+.container > .sb {
+    grid-row: 1 / -1;
+}

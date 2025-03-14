@@ -1,0 +1,27 @@
+.top div {
+    padding-left: 2em;
+  }
+  
+  .top p {
+    background: #fff;
+    padding: 0.5em;
+  }
+  
+  /* Presentational styles */
+  .top div {
+    background: var(--color-primary-x-light);
+    border-top: 1px solid var(--color-primary);
+    border-left: 1px solid var(--color-primary);
+  }
+  
+  .top > div {
+    border-bottom: 1px solid var(--color-primary);
+    border-right: 1px solid var(--color-primary);
+  }
+  
+  .top p {
+    text-align: left;
+    border-left: 1px solid var(--color-primary);
+  }
+  
+  

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- <link rel="stylesheet" href="base-styles.css" /> -->
+        <style>
+            .button {
+                background: #0d1321;;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- This link element is declared after the CSS in the editor so will be more specific -->
+        <link rel="stylesheet" href="styles-2.css" />
+        <main>
+            <div class="wrapper">
+                <article class="flow">
+                    <h1>Cascade position order</h1>
+                    <figure class="callout">
+                        <p>
+                            The <code>&lt;style&gt;</code> element is declared
+                            in the <code>&lt;head&gt;</code>, while the
+                            <code>&lt;link&gt;</code> element is declared in the
+                            <code>&lt;body&gt;</code>. This means the
+                            <code>&lt;link&gt;</code> gets more specificity than
+                            the <code>&lt;style&gt;</code> element and the blue
+                            hex code (<code>#3740ff</code>) is applied to the
+                            button’s background.
+                        </p>
+                    </figure>
+                    <button class="button">
+                        My background has been set by the second link element.
+                    </button>
+                </article>
+            </div>
+        </main>
+    </body>
+</html>

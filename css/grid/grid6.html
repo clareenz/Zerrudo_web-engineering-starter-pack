@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="base-styles.css" />
+        <link rel="stylesheet" href="styles6.css" />
+    </head>
+    <body>
+        <main>
+            <div class="wrapper">
+                <article class="flow">
+                    <h1><code>auto-fill</code> vs <code>auto-fit</code></h1>
+                    <figure class="callout">
+                        <p>
+                            In this example there will be as many tracks as will
+                            fit into the container with a minimum size of 100px.
+                        </p>
+                        <p>
+                            <code
+                                >grid-template-columns: repeat(auto-fill,
+                                minmax(100px, 1fr));</code
+                            >
+                        </p>
+                        <p>
+                            Change between auto-fill and auto-fit keywords to
+                            see the difference when our first row is not filled
+                            with items.
+                        </p>
+                    </figure>
+                    <div class="controls">
+                        <label>
+                            Choose column size
+                            <select id="switcher">
+                                <option value="auto-fill">auto-fill</option>
+                                <option value="auto-fit">auto-fit</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="container" id="container">
+                        <div class="box">Item one</div>
+                        <div class="box">Item two</div>
+                    </div>
+                </article>
+            </div>
+        </main>
+        <script src="script6.js"></script>
+    </body>
+</html>

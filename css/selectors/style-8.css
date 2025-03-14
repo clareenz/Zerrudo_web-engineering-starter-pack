@@ -1,0 +1,11 @@
+:checked ~ .toggle__decor {
+    background: rebeccapurple;
+  }
+  
+  :checked ~ .toggle__decor .toggle__thumb {
+    transform: translateX(var(--metric-toggle-thumb-size)) rotate(270deg);
+  }
+  
+  /* Note the rest of the CSS for this toggle is pulled in externally */
+  
+  

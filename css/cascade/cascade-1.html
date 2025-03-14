@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="base-styles.css" />
+    </head>
+    <body>
+        
+        <link
+            rel="stylesheet"
+            href="styles-1-1.css"
+        />
+        <link
+            rel="stylesheet"
+            href="styles-1-2.css"
+        />
+        <main>
+            <div class="wrapper">
+                <article class="flow">
+                    <h1>Cascade position order</h1>
+                    <figure class="callout">
+                        <p>
+                            The button has a blue background, as defined by
+                            <a
+                                href="https://codepen.io/piccalilli/pen/d0b29f89bdec23929c3847ed01bd7a1d.css"
+                                >this CSS</a
+                            >, which is grabbed by a
+                            <code>&lt;link /&gt;</code>. A CSS rule that sets it
+                            to be dark is grabbed by another
+                            <code>&lt;link /&gt;</code> and is applied because
+                            of its later position.
+                        </p>
+                    </figure>
+                    <button class="button">
+                        My background has been set by the second link element.
+                    </button>
+                </article>
+            </div>
+        </main>
+    </body>
+</html>

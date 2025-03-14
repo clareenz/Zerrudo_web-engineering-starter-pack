@@ -1,0 +1,29 @@
+.page {
+    display: flex;
+}
+
+.page > * {
+    padding: 1rem;
+}
+
+.sidebar {
+    background: var(--color-primary-x-light);
+    outline: 1px solid var(--color-primary);
+    width: 14rem;
+}
+
+/* Extrinsic sizes on this page simulate the small viewport for you */
+body {
+    width: 400px;
+    height: 400px;
+    min-height: unset;
+    padding: 2rem;
+    border: 1px solid var(--color-stroke);
+    background: var(--color-off-white);
+    margin: 1rem auto;
+}
+
+.page {
+    background: white;
+    border: 1px solid var(--color-stroke);
+}

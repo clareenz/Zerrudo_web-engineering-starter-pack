@@ -1,0 +1,20 @@
+:root {
+    --var-col: 1fr;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr var(--var-col);
+    grid-template-rows: 200px auto;
+    gap: 10px;
+    background-color: var(--color-stroke);
+    padding: 1em;
+    max-width: 30rem;
+}
+
+select {
+    min-width: unset;
+}
+.box.blue {
+    background-color: var(--color-primary-x-light);
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <form>
+            <div>
+                <label for="name">Name (required)</label>
+                <input required minlength="8" type="text" id="name" name="name" aria-describedby="name-validation">
+                <span id="name-validation" class="validation-message">Please use at least eight characters.</span>
+            </div>
+            <button>Save</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

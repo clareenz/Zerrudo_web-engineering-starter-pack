@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="base-styles.css" />
+        <link rel="stylesheet" href="styles13.css" />
+    </head>
+    <body>
+        <main>
+            <div class="wrapper">
+                <article class="flow">
+                    <h1>The <code>align-self</code> property</h1>
+                    <figure class="callout">
+                        <p>
+                            Change the value of the
+                            <code>align-self</code> property on the first item.
+                        </p>
+                    </figure>
+                    <div class="controls flow">
+                        <label for="switcher">
+                            Item one’s <code>align-self</code>
+                            <select id="switcher">
+                                <option value="stretch">stretch</option>
+                                <option value="flex-start">flex-start</option>
+                                <option value="flex-end">flex-end</option>
+                                <option value="center">center</option>
+                            </select>
+                        </label>
+                        <label class="toggle" for="toggle-element">
+                            <span class="toggle__label"
+                                >Switch flex direction</span
+                            >
+                            <input
+                                type="checkbox"
+                                role="switch"
+                                class="toggle__element"
+                                id="toggle-element"
+                            />
+                            <div class="toggle__decor" aria-hidden="true">
+                                <div class="toggle__thumb"></div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="container" id="container">
+                        <div class="box bg-primary color-light">Item one</div>
+                        <div class="box">Item two</div>
+                        <div class="box bg-primary-x-light">
+                            Item three<br />with a line break
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </body>
+    <script src="script11.js"></script>
+</html>

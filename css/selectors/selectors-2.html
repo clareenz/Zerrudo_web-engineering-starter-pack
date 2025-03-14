@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="base-styles.css">
+        <link rel="stylesheet" href="style-7.css">
+    </head>
+    <body>
+        <main>
+            <div class="wrapper">
+                <article class="flow">
+                    <h1>Next sibling selector</h1>
+                    <figure class="callout">
+                        <p>
+                            The <strong>next sibling selector</strong> allows us
+                            to only add margin to siblings that follow each
+                            other.
+                        </p>
+                    </figure>
+                    <div class="top box">
+                        <p>I have no margin because I am the first child.</p>
+                        <p>
+                            I have <code>margin-top</code> because I am a
+                            <strong>next sibling</strong>.
+                        </p>
+                        <p>
+                            I am also a <strong>next sibling</strong>, so also
+                            get margin top.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+.page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page > * {
+    padding: 1rem;
+}
+
+.sidebar {
+    background: var(--color-primary-x-light);
+    outline: 1px solid var(--color-primary);
+    flex-grow: 1;
+    flex-basis: 12rem;
+}
+
+.content {
+    flex-basis: 0;
+    flex-grow: 2;
+    min-width: 70%;
+}
+
+/* Extrinsic sizes on this page simulate the small viewport for you */
+body {
+    max-width: 50rem;
+    min-height: unset;
+    padding: 1rem;
+    background: var(--color-off-white);
+    margin: 1rem auto;
+}
+
+.page {
+    background: white;
+    border: 1px solid var(--color-stroke);
+}

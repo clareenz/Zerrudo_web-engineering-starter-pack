@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="base-styles.css" />
+        <link rel="stylesheet" href="style-8.css" />
+    </head>
+    <body>
+        <main>
+            <div class="wrapper">
+                <article class="flow">
+                    <h1>Custom toggle</h1>
+                    <figure class="callout">
+                        <p>
+                            We can use a
+                            <strong>subsequent selector</strong> along with a
+                            `<code>:checked</code>` pseudo class to create a
+                            pure CSS switch element.
+                        </p>
+                    </figure>
+
+                    <label class="toggle" for="toggle-element">
+                        <span class="toggle__label"
+                            >Our custom toggle switch</span
+                        >
+                        <input
+                            type="checkbox"
+                            role="switch"
+                            class="toggle__element"
+                            id="toggle-element"
+                        />
+                        <div class="toggle__decor" aria-hidden="true">
+                            <div class="toggle__thumb"></div>
+                        </div>
+                    </label>
+                </article>
+            </div>
+        </main>
+    </body>
+</html>
