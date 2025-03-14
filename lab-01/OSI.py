@@ -2,7 +2,7 @@ import socket
 import json
 import threading
 
-# Physical Layer: Handles actual sending/receiving through sockets.
+# Physical Layer
 class PhysicalLayer:
     def __init__(self):
         self.medium = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -17,7 +17,7 @@ class PhysicalLayer:
     def send(self, frame, host, port):
         self.medium.connect((host, port))
         json_data = json.dumps(frame)
-        bit_stream = self.to_bits(json_data)  # Convert to bits
+        bit_stream = self.to_bits(json_data)  # Convert JSON to bits
         print(f"[Physical Layer] Sending Bit Stream: {bit_stream}")
         self.medium.sendall(bit_stream.encode())
         self.medium.close()
@@ -36,7 +36,7 @@ class PhysicalLayer:
         listener.close()
         return json.loads(json_data)
 
-# Data Link Layer: Adds/Processes MAC address.
+# Data Link Layer
 class DataLinkLayer:
     def create_frame(self, packet):
         frame = {
@@ -50,7 +50,7 @@ class DataLinkLayer:
         print(f"[Data Link Layer] Received Frame: {frame}")
         return frame["payload"]
 
-# Network Layer: Adds/Processes IP information.
+# Network Layer
 class NetworkLayer:
     def add_ip_packet(self, segment):
         packet = {
@@ -64,7 +64,7 @@ class NetworkLayer:
         print(f"[Network Layer] Received Packet: {packet}")
         return packet["payload"]
 
-# Transport Layer: Adds/Processes TCP-like sequencing.
+# Transport Layer
 class TransportLayer:
     def add_tcp_segment(self, data):
         segment = {
@@ -78,7 +78,7 @@ class TransportLayer:
         print(f"[Transport Layer] Received Segment: {segment}")
         return segment["payload"]
 
-# Session Layer: Manages connection and session data.
+# Session Layer
 class SessionLayer:
     def manage_session(self, data):
         print(f"[Session Layer] Managing Data: {data}")
@@ -88,7 +88,7 @@ class SessionLayer:
         print(f"[Session Layer] Handling Data: {session_data}")
         return session_data["payload"]
 
-# Presentation Layer: Handles encoding and decoding.
+# Presentation Layer
 class PresentationLayer:
     def encode(self, data):
         print(f"[Presentation Layer] Encoding Data: {data}")
@@ -98,7 +98,7 @@ class PresentationLayer:
         print(f"[Presentation Layer] Decoding Data: {data}")
         return data["payload"]
 
-# Application Layer: Simulates an HTTP-like request.
+# Application Layer
 class ApplicationLayer:
     def create_request(self, message):
         print(f"[Application Layer] Creating Request: {message}")
