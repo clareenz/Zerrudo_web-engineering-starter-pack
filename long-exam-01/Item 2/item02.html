@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Reddit Layout</title>
+    <link rel="stylesheet" href="item02.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <a href="#"><img src="https://img.icons8.com/?size=100&id=wUUb0NekBwse&format=png&color=000000" alt="Left Icon"></a>
+            <h1>reddit</h1>
+            <div class="header-icons">
+                <a href="#"><img src="https://img.icons8.com/?size=100&id=1Rt8tTnKGPER&format=png&color=000000" alt="Notifications"></a>
+                <a href="#"><img src="https://img.icons8.com/?size=100&id=SemITKbUbKo0&format=png&color=000000" alt="Messages"></a>
+                <a href="#"><img src="https://img.icons8.com/?size=100&id=kshUdu5u4FCX&format=png&color=000000" alt="Profile"></a>
+                <a href="#"><img src="https://img.icons8.com/?size=100&id=Aj0b870PMQIm&format=png&color=000000" alt="Stats"></a>
+                <a href="#"><img src="https://img.icons8.com/?size=100&id=ncavSQSXHxd7&format=png&color=000000" alt="Settings"></a>
+                <a href="#"><img src="https://img.icons8.com/?size=100&id=FLisMqR76b1i&format=png&color=000000" alt="Help"></a>
+                <a href="#"><img src="https://img.icons8.com/?size=100&id=gxDo9YXCsacn&format=png&color=000000" alt="Logout"></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <aside class="sidebar">
+        <div class="close-btn" onclick="closeSidebar()">&laquo;</div>
+        <section class="subreddits">
+            <ul class="icon-list">
+                <li><img src="https://img.icons8.com/?size=100&id=tb4mhEQTqtJ1&format=png&color=000000" class="icon"> <span>FRONT PAGE</span></li>
+                <li><img src="https://img.icons8.com/?size=100&id=110566&format=png&color=000000" class="icon"> <span>PICS</span></li>
+                <li><img src="https://img.icons8.com/?size=100&id=116711&format=png&color=000000" class="icon"> <span>SCIENCE</span></li>
+                <li><img src="https://img.icons8.com/?size=100&id=gShesypkbo1o&format=png&color=000000" class="icon"> <span>TECHNOLOGY</span></li>
+                <li><a href="#">(MORE)</a></li>
+            </ul>
+        </section>
+    </aside>
+
+    <section class="content">
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('hot')">what's hot?</button>
+            <button class="tab" onclick="showTab('new')">new</button>
+            <button class="tab" onclick="showTab('controversial')">controversial</button>
+            <button class="tab" onclick="showTab('top')">top</button>
+            <button class="tab" onclick="showTab('saved')">saved</button>
+        </div>
+
+        <div class="tab-content" id="hot">
+            <div class="thread">
+                <div class="thread-number">1</div>
+                <div class="thread-vote">
+                    <button class="upvote"><img src="https://img.icons8.com/ios-filled/14/up.png" alt="Upvote"></button>
+                    <span class="vote-count">523</span>
+                    <button class="downvote"><img src="https://img.icons8.com/ios-filled/14/down.png" alt="Downvote"></button>
+                </div>
+                <div class="thread-thumbnail">
+                    <img src="https://via.placeholder.com/50" alt="Thumbnail">
+                </div>
+                <div class="thread-details">
+                    <h3><a href="#">NASA confirms water on the Moon!</a></h3>
+                    <p class="thread-actions"><a href="#">1.2k comments</a> | <a href="#">share</a> | <a href="#">save</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <aside class="comments">
+        <h2>NASA confirms water on the Moon!</h2>
+        <div class="thread-meta">
+            <div class="thread-vote">
+                <button class="upvote"><img src="https://img.icons8.com/ios-filled/14/up.png" alt="Upvote"></button>
+                <span class="vote-count">523</span>
+                <button class="downvote"><img src="https://img.icons8.com/ios-filled/14/down.png" alt="Downvote"></button>
+            </div>
+            <span class="points">1.2k points (85% liked it)</span> |
+            <span class="upvotes">↑ 1023</span> |
+            <span class="downvotes">↓ 201</span> |
+            <span class="date">Submitted 2 hours ago</span> |
+            <span class="comments-count">1.2k comments</span> |
+            <span class="sort">Sort by: <select><option>Best</option><option>New</option><option>Top</option></select></span>
+        </div>
+
+        <div class="comment">
+            <div class="comment-vote">
+                <button class="upvote"><img src="https://img.icons8.com/ios-filled/14/up.png" alt="Upvote"></button>
+                <span class="vote-count">315</span>
+                <button class="downvote"><img src="https://img.icons8.com/ios-filled/14/down.png" alt="Downvote"></button>
+            </div>
+            <div class="comment-details">
+                <p class="comment-meta"><strong><a href="#">SpaceLover42</a></strong> • 315 points • 1 hour ago</p>
+                <p class="comment-text">This is groundbreaking! I wonder how this will impact future moon missions.</p>
+                <p class="comment-actions"><a href="#">permalink</a> | <a href="#">report</a> | <a href="#">reply</a></p>
+            </div>
+        </div>
+    </aside>
+</main>
+
+<footer>
+    <p>© 2011 reddit inc. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+/* General Styles */
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #dceefe;
+    padding: 10px 20px;
+}
+
+/* Container for "reddit" and icons */
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo container (including left icon, reddit text, and right-side icons) */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Left-side icon */
+.logo img {
+    width: 27px;
+    height: 27px;
+}
+
+/* "reddit" text */
+.logo h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+/* Icons after "reddit" */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+/* Icons size */
+.header-icons img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.header-icons a:hover img {
+    opacity: 0.8;
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    align-items: flex-start;
+    width: 100vw; 
+    height: 100vh; 
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px; 
+    flex-shrink: 0; 
+    height: 100vh;
+}
+
+/* Content (Tabs beside Sidebar) */
+.content {
+    flex-grow: 1;  
+    max-width: 300; 
+    height: 100vh;
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Tabs container */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    width: 100%;
+}
+
+/* Individual tab buttons */
+.tab {
+    border: 2px solid #ccc;
+    border-bottom: none;
+    padding: 3px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* Active tab */
+.tab.active {
+    background: white;
+    border-bottom: 1px solid white;
+    color: #cc0000;
+}
+
+/* Tab Content */
+.tab-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Thread Container */
+.thread {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    font-size: 10px;
+    height: calc(100vh / 14);
+}
+
+/* Numbering (Left Side) */
+.thread-number {
+    width: 16px;
+    text-align: right;
+    font-weight: bold;
+    color: #888;
+    margin-right: 5px;
+    font-size: 8px;
+}
+
+/* Voting Section */
+.thread-vote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5px;
+}
+
+/* Upvote/Downvote Buttons */
+.upvote, .downvote {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1px;
+}
+
+.upvote img, .downvote img {
+    width: 20px; 
+    height: 12px;
+}
+
+.upvote:hover {
+    color: orange;
+}
+
+.downvote:hover {
+    color: blue;
+}
+
+/* Vote Count */
+.vote-count {
+    font-weight: bold;
+    color: #555;
+    font-size: 8px;
+}
+
+/* Thumbnail */
+.thread-thumbnail img {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    margin-right: 6px;
+}
+
+/* Thread Details */
+.thread-details {
+    flex-grow: 1;
+}
+
+/* Thread Title */
+.thread-details h3 {
+    margin: 0;
+    font-size: 9px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.thread-details h3 a {
+    text-decoration: none;
+    color: #2212b4;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.thread-details h3 a:hover {
+    text-decoration: underline;
+}
+
+/* Subtitle (Time & User) */
+.thread-subtitle {
+    color: #777;
+    font-size: 9px;
+    margin: 3px 0;
+}
+
+/* Actions (Comments, Share, Save, etc.) */
+.thread-actions a {
+    color: #888;
+    font-size: 8px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.thread-actions a:hover {
+    text-decoration: underline;
+}
+
+
+/* Close button styling */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Close button hover effect */
+.close-btn:hover {
+    color: #cc0000;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #eef8fe;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    box-sizing: border-box;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.icon-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.icon-list li {
+    margin: 3px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 180px; /* Adjusted for alignment */
+    font-size: 12px; /* Keep the same text size */
+}
+
+/* Keep icons the same size */
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Boxed Sections (No solid border, aligned with text) */
+.sidebar .submit-link,
+.sidebar .create-community {
+    display: inline-block;
+    background-color: #daeefd;
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 0;
+    box-shadow: none;
+    width: 180px; /* Match text width in the icon list */
+    position: relative;
+    left: -20px; /* Extend beyond the sidebar */
+}
+
+/* Titles & Text Inside Boxes */
+.sidebar .submit-link h4,
+.sidebar .create-community h4 {
+    margin: 3px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #4f77b6;
+}
+
+.sidebar .submit-link p,
+.sidebar .create-community p {
+    font-size: 12px; 
+    line-height: 1.2;
+}
+
+/* "Tiniest Ad" Styling */
+.sidebar .tiniest-ad {
+    text-align: right;
+    font-size: 12px; 
+    font-weight: bold;
+    color: #555;
+    margin-top: 10px;
+    padding-right: 5px;
+    white-space: nowrap;
+    visibility: visible;
+    opacity: 1;
+}
+
+.tiniest-ad .ad-image {
+    display: block;
+    max-width: 100%; /* Ensures the image fits inside the section */
+    margin: 0 auto 5px; /* Centers the image and adds space below */
+}
+
+
+/* Paragraph styling inside boxed sections */
+.sidebar .submit-link p,
+.sidebar .create-community p {
+    margin: 5px 10px;
+    font-size: 12px;
+    color: #555;
+}
+
+.content {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.post {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.post h3 a {
+    text-decoration: none;
+    color: #0079d3;
+}
+
+/* Comments */
+.comments {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
