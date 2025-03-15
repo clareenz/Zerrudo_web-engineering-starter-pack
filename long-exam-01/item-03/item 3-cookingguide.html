@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancake Cooking Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header tabindex="0">
+        <h1>Easy Pancake Recipe</h1>
+        <p>Follow these simple steps to make delicious pancakes.</p>
+    </header>
+
+    <main>
+        <section id="step1" class="step" tabindex="0">
+            <h2>Step 1: Gather Ingredients</h2>
+            <img src="images/step1.png" alt="A table with flour, eggs, and milk" aria-hidden="true">
+            <p>Flour, eggs, milk, sugar, and baking powder.</p>
+            <a href="#step2" class="next" aria-label="Go to Step 2" aria-hidden="true">Next</a>
+        </section>
+
+        <section id="step2" class="step" tabindex="0" >
+            <h2>Step 2: Mix Ingredients</h2>
+            <img src="images/step2.png" alt="A bowl with whisked pancake batter" aria-hidden="true">
+            <p>Whisk all ingredients in a bowl until smooth.</p>
+            <a href="#step1" class="prev" aria-label="Go back to Step 1" aria-hidden="true">Back</a>
+            <a href="#step3" class="next" aria-label="Go to Step 3" aria-hidden="true">Next</a>
+        </section>
+
+        <section id="step3" class="step"  tabindex="0">
+            <h2>Step 3: Cook the Pancakes</h2>
+            <img src="images/step3.png" alt="Pancakes cooking in a pan" aria-hidden="true">
+            <p>Pour batter onto a heated pan and cook both sides.</p>
+            <a href="#step2" class="prev" aria-label="Go back to Step 2" aria-hidden="true">Back</a>
+            <a href="#step4" class="next" aria-label="Go to Step 4" aria-hidden="true">Next</a>
+        </section>
+
+        <section id="step4" class="step" tabindex="0">
+            <h2>Step 4: Serve and Enjoy</h2>
+            <img src="images/step4.png" alt="A plate with pancakes and syrup" aria-hidden="true">
+            <p>Top with syrup or fruits and enjoy your pancakes!</p>
+            <a href="#step3" class="prev" aria-label="Go back to Step 3" aria-hidden="true">Back</a>
+            <a href="#step1" class="restart" aria-label="Restart Recipe" aria-hidden="true">Restart</a>
+        </section>
+    </main>
+
+</body>
+</html>
