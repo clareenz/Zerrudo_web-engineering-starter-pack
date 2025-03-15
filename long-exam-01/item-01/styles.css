@@ -1,0 +1,124 @@
+/* General Layout */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.news-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  max-width: 800px;
+  width: 100%;
+  margin: 20px;
+  justify-content: center; /* Ensures it's centered */
+}
+
+
+.newsfeed {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.news-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.news-card:hover {
+  box-shadow: 0px 6px 12px #333;
+}
+
+.news-card img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 8px;
+   /* Ensures the image is properly aligned and responsive */
+}
+
+.news-content {
+  padding: 15px;
+}
+
+.news-content h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.date {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.news-content a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.news-content a:hover {
+  text-decoration: underline;
+  color: #333;
+}
+
+/* Sidebar */
+/* The sidebar contains trending topics and aligns to the right of the main content */
+.sidebar {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: fit-content;
+  max-width: fit-content;
+}
+
+.sidebar h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #007BFF;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+  .news-container {
+      display: flex;
+      flex-direction: column;
+  }
+}
