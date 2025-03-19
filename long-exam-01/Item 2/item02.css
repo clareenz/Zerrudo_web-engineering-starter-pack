@@ -22,6 +22,7 @@ header {
     display: flex;
     align-items: center;
     width: 100%;
+    position: sticky;
 }
 
 /* Logo container (including left icon, reddit text, and right-side icons) */
@@ -71,26 +72,20 @@ main {
     width: 100vw; 
     height: 100vh; 
     overflow: hidden;
-}
-
-/* Sidebar */
-.sidebar {
-    width: 200px; 
-    flex-shrink: 0; 
-    height: 100vh;
+    flex-wrap: nowrap;
+    gap: 20px;
 }
 
 /* Content (Tabs beside Sidebar) */
 .content {
     flex-grow: 1;  
-    max-width: 300; 
-    height: 100vh;
-    padding: 10px;
-    background-color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-}
+    max-width: 300; 
+    height: calc(100vh - 60px);
+    padding: 10px;
+    background-color: #fff;
+} 
 
 /* Tabs container */
 .tabs {
@@ -254,17 +249,15 @@ main {
 
 /* Sidebar */
 .sidebar {
+    display: flex;
     background-color: #eef8fe;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    left: 0;
+    width: 200px; 
+    flex-shrink: 0; 
     height: 100vh;
-    width: 200px;
-    box-sizing: border-box;
+    padding: 10px;
+    position: sticky;
+    top: 70px;
     overflow: hidden;
-    justify-content: space-between;
 }
 
 .icon-list {
@@ -381,3 +374,13 @@ main {
     margin-bottom: 10px;
 }
 
+.sidebar, .content, .comments {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.sidebar::-webkit-scrollbar,
+.content::-webkit-scrollbar,
+.comments::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
