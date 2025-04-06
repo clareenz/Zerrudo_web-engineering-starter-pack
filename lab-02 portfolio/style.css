@@ -1,0 +1,27 @@
+/* ====== Fade-In Animation for Hero Section ====== */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.fade-in {
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Parallax Scrolling Effect */
+.parallax {
+  background-image: url('images/bg5.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Enables the parallax effect */
+}
+
+.clip-diagonal {
+  clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 90%);
+}
