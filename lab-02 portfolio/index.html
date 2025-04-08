@@ -30,7 +30,7 @@
     </script>
 </head>
 
-<body class="bg-[#fbfbfe] text-[#040316] dark:bg-[#010104] dark:text-[#eae9fc] parallax">
+<body class="bg-[#fbfbfe] text-[#040316] dark:bg-[#010104] dark:text-[#eae9fc] parallax dark:dark-parallax">
     <!-- Navigation Bar -->
     <nav class="fixed top-0 left-0 w-full bg-[#fbfbfe] dark:bg-[#010104] shadow-md z-50">
         <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
@@ -56,35 +56,19 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="bg-[#2f27ce] dark:bg-[#3a31d8] h-screen flex justify-center items-center text-center">
+    <section id="hero" class="fade-in">
         <div
-            class="bg-white dark:bg-[#1f1f3a] p-8 rounded-xl shadow-2xl flex flex-col sm:flex-row items-center gap-6 max-w-4xl mx-auto">
-            <img src="images/profile.jpg" alt="Profile Picture"
-                class="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 rounded-full border-4 border-[#dddbff] dark:border-[#0600c2] shadow-lg animate-pulse" />
-
+            class=" h-screen flex flex-col justify-around sm:flex-row items-center text-center gap-6 mx-auto max-w-7xl">
             <div class="text-center sm:text-left">
-                <h1 class="text-5xl font-bold text-[#2f27ce] dark:text-[#3a31d8]">
-                    Hi There
+                <h1 class="text-[#040316] dark:text-[#eae9fc] text-6xl font-bold mb-10">
+                    Hi,
                 </h1>
-                <h2 class="text-5xl font-bold text-[#040316] dark:text-[#eae9fc] mt-2">
-                    I'm Mc
+                <h2 class="text-[#040316] dark:text-[#eae9fc] text-6xl font-bold mb-10">
+                    I'm <span class="text-[#2f27ce] dark:text-[#3a31d8]"> Mc</span>
                 </h2>
-                <p class="text-xl mt-2 text-[#443dff] dark:text-[#0600c2]">
+                <h2 class="text-[#040316] dark:text-[#eae9fc] text-6xl font-bold mb-10">
                     Web Developer
-                </p>
-                <p class="text-lg md:text-xl mt-2 font-semibold italic text-[#040316] dark:text-[#eae9fc]">
-                    Crafting
-                    <span class="text-[#2f27ce] font-bold dark:text-[#3a31d8]">
-                        Responsive
-                    </span>
-                    ,
-                    <span class="text-[#443dff] dark:text-[#0600c2]">Scalable</span>,
-                    and
-                    <span class="text-[#2f27ce] font-bold dark:text-[#3a31d8]">
-                        Modern
-                    </span>
-                    Web Experiences.
-                </p>
+                </h2>
                 <div class="flex justify-center sm:justify-start gap-4 mt-4">
                     <!-- Facebook -->
                     <a href="https://facebook.com/yourprofile" target="_blank"
@@ -105,52 +89,74 @@
                     </a>
                 </div>
             </div>
-        </div>
+
+            <img src="images/profile.jpg" alt="Profile Picture"
+                class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 rounded-full border-4 justify-self-center border-[#dddbff] dark:border-[#0600c2] shadow-lg animate-pulse" />
+
+        </div><!-- Your content goes here -->
+
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-16 text-center">
-        <div class=" bg-[#dddbff] dark:bg-[#020024] p-8 rounded-xl shadow-2xl max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-[#040316] dark:text-[#eae9fc]">
-                Skills
-            </h2>
-            <div
-                class="flex flex-wrap justify-center mt-6 gap-4">
-                <div
-                    class="px-6 py-3 bg-[#fbfbfe] text-black rounded-lg shadow-lg hover:scale-110 transition duration-300">
-                    <i class="fa-brands fa-html5 text-4xl"></i>
-                    <h3 class="font-semibold text-xl mt-2">HTML</h3>
-                </div>
-                <div
-                    class="px-6 py-3 bg-[#fbfbfe] text-black rounded-lg shadow-lg hover:scale-110 transition duration-300">
-                    <i class="fa-brands fa-css3-alt text-4xl"></i>
-                    <h3 class="font-semibold text-xl mt-2">CSS</h3>
-                </div>
-                <div
-                    class="px-6 py-3 bg-[#fbfbfe] text-black rounded-lg shadow-lg hover:scale-110 transition duration-300">
-                    <i class="fas fa-code text-4xl"></i>
-                    <h3 class="font-semibold text-xl mt-2">JavaScript</h3>
-                </div>
-                <div
-                    class="px-6 py-3 bg-[#fbfbfe] text-black rounded-lg shadow-lg hover:scale-110 transition duration-300">
-                    <i class="fab fa-react text-4xl"></i>
-                    <h3 class="font-semibold text-xl mt-2">React</h3>
-                </div>
-                <div
-                    class="px-6 py-3 bg-[#fbfbfe] text-black rounded-lg shadow-lg hover:scale-110 transition duration-300">
-                    <i class="fab fa-python text-4xl"></i>
-                    <h3 class="font-semibold text-xl mt-2">Python</h3>
+    <section id="skills" class="py-16">
+        <div
+            class="bg-[#dddbff] dark:bg-[#020024] p-8 rounded-xl shadow-2xl max-w-7xl mx-auto gap-6 flex flex-col sm:flex-row items-center sm:items-start">
+            <!-- Left: Skills description and list -->
+            <div class="sm:w-1/2 text-center sm:text-left">
+                <h2 class="text-3xl font-bold text-[#040316] dark:text-[#eae9fc] mb-6 ">
+                    <u>Skills</u>
+                </h2>
+                <p class="text-lg text-[#040316] dark:text-[#eae9fc] mb-6">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto
+                    consectetur error eum eaque sit.
+                </p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                    <!-- Skill 1 -->
+                    <div
+                        class="flex items-center justify-center gap-4 px-6 py-3 bg-[#fbfbfe] text-black rounded-lg shadow-lg hover:scale-110 transition duration-300">
+                        <i class="fa-brands fa-html5 text-4xl"></i>
+                        <h3 class="font-semibold text-xl">HTML</h3>
+                    </div>
+                    <!-- Skill 2 -->
+                    <div
+                        class="flex items-center justify-center gap-4 px-6 py-3 bg-[#fbfbfe] text-black rounded-lg shadow-lg hover:scale-110 transition duration-300">
+                        <i class="fa-brands fa-css3-alt text-4xl"></i>
+                        <h3 class="font-semibold text-xl">CSS</h3>
+                    </div>
+                    <!-- Skill 3 -->
+                    <div
+                        class="flex items-center justify-center gap-4 px-6 py-3 bg-[#fbfbfe] text-black rounded-lg shadow-lg hover:scale-110 transition duration-300">
+                        <i class="fas fa-code text-4xl"></i>
+                        <h3 class="font-semibold text-xl">JavaScript</h3>
+                    </div>
+                    <!-- Skill 4 -->
+                    <div
+                        class="flex items-center justify-center gap-4 px-6 py-3 bg-[#fbfbfe] text-black rounded-lg shadow-lg hover:scale-110 transition duration-300">
+                        <i class="fab fa-react text-4xl"></i>
+                        <h3 class="font-semibold text-xl">React</h3>
+                    </div>
+                    <!-- Skill 5 -->
+                    <div
+                        class="flex items-center justify-center gap-4 px-6 py-3 bg-[#fbfbfe] text-black rounded-lg shadow-lg hover:scale-110 transition duration-300">
+                        <i class="fab fa-python text-4xl"></i>
+                        <h3 class="font-semibold text-xl">Python</h3>
+                    </div>
                 </div>
             </div>
+
+            <!-- Right: Image -->
+            <div class="sm:w-1/2 mt-6 sm:mt-0 self-center">
+                <img src="images/skills.jpg" alt="Skills" class="w-full h-auto rounded-lg shadow-xl" />
+            </div>
         </div>
-
-
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-16 text-center bg-[#dddbff] dark:bg-[#020024]">
+    <section id="projects" class="py-16 text-center">
         <h2 class="text-3xl font-bold text-[#040316] dark:text-[#eae9fc]">
-            Projects
+            <u>
+                Projects
+            </u>
         </h2>
         <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-6">
             <!-- Project 1 -->
@@ -184,7 +190,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="py-16 text-center bg-[#020024] text-[#eae9fc]">
-        <h2 class="text-3xl font-bold text-[#3a31d8]">Contact Me</h2>
+        <h2 class="text-3xl font-bold text-[#3a31d8]"><u>Contact Me</u></h2>
         <form class="mt-6 max-w-lg mx-auto space-y-4">
             <input type="text" placeholder="Your Name"
                 class="w-full p-3 rounded-lg border border-[#3a31d8] bg-[#fbfbfe] dark:bg-[#020024] text-[#040316] dark:text-white" />

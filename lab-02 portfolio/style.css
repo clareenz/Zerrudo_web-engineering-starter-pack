@@ -1,3 +1,28 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+
+:root {
+  --color-text: #040316;
+  --color-bg: #fbfbfe;
+  --color-primary: #2f27ce;
+  --color-secondary: #dddbff;
+  --color-accent: #443dff;
+}
+
+.dark {
+  --color-text: #eae9fc;
+  --color-bg: #010104;
+  --color-primary: #3a31d8;
+  --color-secondary: #020024;
+  --color-accent: #0600c2;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+
 /* ====== Fade-In Animation for Hero Section ====== */
 @keyframes fadeIn {
   from {
@@ -13,15 +38,26 @@
   animation: fadeIn 1.5s ease-out;
 }
 
+.background {
+  background-image: url('images/bg1.png');
+}
 /* Parallax Scrolling Effect */
+/* Light Mode Parallax */
+/* Light Mode Parallax */
 .parallax {
-  background-image: url('images/bg5.jpg');
+  background-image: url('images/bg1.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed; /* Enables the parallax effect */
+  height: 100vh; /* Adjust height as needed */
 }
 
+/* Dark Mode Parallax */
+html.dark .parallax {
+  background-image: url('images/darkBG.png'); /* Dark mode background image */
+}
 .clip-diagonal {
   clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 90%);
 }
+
