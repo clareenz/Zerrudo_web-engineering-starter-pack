@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinding Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="side-panel">
+            <h1>Pathfinding Visualizer</h1>
+            <div class="panel-section">
+                <h2>Instructions</h2>
+                <p class="instructions">
+                    1. Click to set start point (green)<br>
+                    2. Click to set end point (red)<br>
+                    3. Toggle weight mode to add weights<br>
+                    4. Click to add/remove walls (black)
+                </p>
+            </div>
+            <div class="panel-section">
+                <h2>Controls</h2>
+                <label for="algorithmSelect">Algorithm:</label>
+                <select id="algorithmSelect" class="select">
+                    <option value="dijkstra">Dijkstra's Algorithm</option>
+                    <option value="astar">A* Search</option>
+                </select>
+
+                <label for="speedControl">Speed:</label>
+                <select id="speedControl" class="select">
+                    <option value="slow">Slow</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="fast">Fast</option>
+                </select>
+
+                <div class="control-group">
+                    <label>Grid Size:</label>
+                    <div class="grid-size-controls">
+                        <input type="number" id="gridRows" class="number-input" value="10" min="5" max="50"> x
+                        <input type="number" id="gridCols" class="number-input" value="10" min="5" max="50">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>Weights:</label>
+                    <div class="weight-controls">
+                        <input type="number" id="weightValue" class="number-input" value="5" min="2" max="20">
+                        <button id="toggleWeight" class="btn">Toggle Weight Mode</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button onclick="startAlgorithm()" class="btn primary">Find Path</button>
+                    <button onclick="resetGrid()" class="btn">Reset</button>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <div id="grid-container"></div>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="cell-example start"></div>
+                    <span>Start</span>
+                </div>
+                <div class="legend-item">
+                    <div class="cell-example end"></div>
+                    <span>End</span>
+                </div>
+                <div class="legend-item">
+                    <div class="cell-example wall"></div>
+                    <span>Wall</span>
+                </div>
+                <div class="legend-item">
+                    <div class="cell-example weighted">5</div>
+                    <span>Weight</span>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
